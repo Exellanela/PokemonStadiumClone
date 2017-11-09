@@ -8,7 +8,7 @@ public class Skill{
     public SkillType type;  
     public float damage;
     public float accuracy;
-    public int pp;
+    public int pp; // TODO: what is PP?
     // false, then it has the special monster type added to the skill
     public bool isNaturalAttack;
     #endregion
@@ -23,7 +23,7 @@ public class Skill{
     /// <param name="p">PP value</param>
     /// <param name="s">isNaturalAttack</param>
     /// <param name="ab">Turns that the special attack would effect</param>
-    public Skill(string n, SkillType t, float d, float a, int p, bool s)
+    public Skill(string n, SkillType t, float d, float a, int p, bool s) // TODO: in the future, avoid single-character parameter names
     {
         name = n;
         type = t;
