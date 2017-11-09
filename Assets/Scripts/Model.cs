@@ -29,6 +29,9 @@ public class Model : Element{
     #endregion
 
     #region player
+        // TODO: write comments
+        // - how is player1 and player2 assigned? etc
+        // - make it EASIER FOR PEOPLE TO COLLABORATE WITH YOU
     private Player player1;
     private Player player2;
     public Player GetPlayer(int ID)
@@ -68,6 +71,7 @@ public class Model : Element{
     
     void Start()
     {
+        // TODO: write a comment, what is this doing?
         InitTable();
 
         player1 = new Player();
@@ -84,9 +88,13 @@ public class Model : Element{
             Debug.Log("Player2's pokemon: ");
             player2.currentPokemon.PrintStatus();
         */
+        // TODO: write a comment, what is this doing? what is "3"?
         SelectSkill(3);
+        // TODO: write a comment, what is this doing?
         ChangePlayerTurn();
+        // TODO: write a comment, what is this doing?
         SelectSkill(2);
+        // TODO: write a comment, what is this doing?
         TestBattle();
     }
 
@@ -95,6 +103,10 @@ public class Model : Element{
         CalculateBattle();
     }
 
+    // this is OK for this project, but if you were actually working on a Pokemon game, you would NOT hardcode this
+    // instead, you would use a data-based game files...
+    // Unity likes it when you use Scriptable Object https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/scriptable-objects
+    // to store data... don't use JSON, that's for web stuff, it's hard to diff and we don't really like it in game dev
     private void InitTable()
     {
         /*
@@ -189,7 +201,7 @@ public class Model : Element{
             }
         }
         // if it is, then we should somehow spawn the next pokemon in the list
-        else if (p2.status == Pokemon.PokemonStatus.Feint)
+        else if (p2.status == Pokemon.PokemonStatus.Feint) // TODO: correct "Feint" to "Faint"
         {
             // we need to swtich the pokemon here
         }
@@ -224,12 +236,12 @@ public class Model : Element{
     /// <param name="attacker"></param>
     /// <param name="victom"></param>
     /// <returns></returns>
-    private float CalculateDamage(Pokemon attacker, Pokemon victom)
+    private float CalculateDamage(Pokemon attacker, Pokemon victom) // TODO: correct "victom" to "victim"
     {
         float damage = 0;
         float modifier = CalculateModifier(attacker.type, victom.type);
         float level = 50f;  // assume all pokemon are 50 levels
-
+  
         damage = ((((level * 2) / 5) + 2) * attacker.selectedSkill.damage * attacker.attack / victom.defense) / 50 + 2;
         damage *= modifier;
         return damage;
