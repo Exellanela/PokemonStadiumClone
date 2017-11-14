@@ -15,14 +15,22 @@ public class SelectionStageHandler : Handler
     public override void HandleStage(int turn)
     {
         //Debug.Log("Handling selection");
-        HandleInput();
+        if(canRecieveInput)
+            HandleInput();
     }
 
     public override void OnEnterStage()
     {
         base.OnEnterStage();
         ShowUI(true);
+        canRecieveInput = true;
         Debug.Log("Entered Selection Stage");
+    }
+
+    public override void OnExitStage(Model.ActionStage nextStage)
+    {
+        base.OnExitStage(nextStage);
+        canRecieveInput = false;
     }
 
     private void ShowUI(bool b)
@@ -59,7 +67,21 @@ public class SelectionStageHandler : Handler
             }
         }else
         {
-
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                // go to battle
+                OnExitStage(Model.ActionStage.AttackStage);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                // go to switch pokemon
+                OnExitStage(Model.ActionStage.SwitchStage);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                // go to bag
+                OnExitStage(Model.ActionStage.BagStage);
+            }
         }
     }
 }

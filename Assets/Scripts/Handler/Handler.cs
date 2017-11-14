@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Handler : Element {
 
+    protected bool canRecieveInput = false;
+
     /// <summary>
     /// Update the game logic in different game stage.
     /// </summary>
@@ -24,4 +26,6 @@ public abstract class Handler : Element {
     }
 
     protected virtual void HandleInput() { }
+
+    public virtual void UpdateUI() { }
 }

@@ -72,15 +72,6 @@ public class BaseController : Element {
     }
 
     /// <summary>
-    /// Can only be called by the battle stage handler
-    /// Finish all the stats calculation and update the results to respective instances.
-    /// </summary>
-    public void CalculateBattleStats()
-    {
-
-    }
-
-    /// <summary>
     /// Can only be called by the skill selection handler
     /// </summary>
     /// <param name="skillID">skill id (0,3)</param>
