@@ -6,7 +6,6 @@ public class Jolteon : Pokemon {
 
     protected override void SetUpPokemon()
     {
-        base.SetUpPokemon();
         name = "Jolteon";
         type = PokemonType.Electric;
         status = PokemonStatus.Normal;
@@ -14,6 +13,7 @@ public class Jolteon : Pokemon {
         health = 149f;
         attack = 140f;
         defense = 91f;
+        base.SetUpPokemon();
     }
 
     protected override void SetUpSkills()

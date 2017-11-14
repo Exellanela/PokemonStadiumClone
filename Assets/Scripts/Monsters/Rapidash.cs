@@ -6,7 +6,6 @@ public class Rapidash : Pokemon {
 
     protected override void SetUpPokemon()
     {
-        base.SetUpPokemon();
         name = "Rapidash";
         type = PokemonType.Fire;
         status = PokemonStatus.Normal;
@@ -14,6 +13,7 @@ public class Rapidash : Pokemon {
         health = 149f;
         attack = 130f;
         defense = 100f;
+        base.SetUpPokemon();
     }
 
     protected override void SetUpSkills()

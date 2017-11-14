@@ -45,4 +45,15 @@ public class Player {
     {
         currentPokemon = currentPokemon == pokemons[0] ? pokemons[1] : pokemons[0];
     }
+
+    public void SwitchPokemon() 
+    {
+        currentPokemon = (currentPokemon == pokemons[0]) ? pokemons[1] : pokemons[0];
+        if(currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            Debug.LogWarning("Both pokemons are feint");
+        }
+
+        Debug.Log("New Pokemon is: " + currentPokemon.name);
+    }
 }

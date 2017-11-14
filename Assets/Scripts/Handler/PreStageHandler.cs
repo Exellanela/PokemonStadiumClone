@@ -19,9 +19,8 @@ public class PreStageHandler : Handler
     {
         base.OnEnterStage();
         Debug.Log("Entered Prestage");
-
         // for testing now, we just skip prestage. But actually we can do some instantiation here.
-        
+
         // go the the next stage for now
         OnExitStage(Model.ActionStage.SelectionStage);
     }

@@ -71,7 +71,6 @@ public class Model : Element{
     
     void Start()
     {
-        // TODO: write a comment, what is this doing?
         InitTable();
 
         player1 = new Player();
@@ -88,13 +87,9 @@ public class Model : Element{
             Debug.Log("Player2's pokemon: ");
             player2.currentPokemon.PrintStatus();
         */
-        // TODO: write a comment, what is this doing? what is "3"?
         SelectSkill(3);
-        // TODO: write a comment, what is this doing?
         ChangePlayerTurn();
-        // TODO: write a comment, what is this doing?
         SelectSkill(2);
-        // TODO: write a comment, what is this doing?
         TestBattle();
     }
 
@@ -103,10 +98,6 @@ public class Model : Element{
         CalculateBattle();
     }
 
-    // this is OK for this project, but if you were actually working on a Pokemon game, you would NOT hardcode this
-    // instead, you would use a data-based game files...
-    // Unity likes it when you use Scriptable Object https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/scriptable-objects
-    // to store data... don't use JSON, that's for web stuff, it's hard to diff and we don't really like it in game dev
     private void InitTable()
     {
         /*
@@ -201,7 +192,7 @@ public class Model : Element{
             }
         }
         // if it is, then we should somehow spawn the next pokemon in the list
-        else if (p2.status == Pokemon.PokemonStatus.Feint) // TODO: correct "Feint" to "Faint"
+        else if (p2.status == Pokemon.PokemonStatus.Feint)
         {
             // we need to swtich the pokemon here
         }
@@ -260,3 +251,153 @@ public class Model : Element{
         return typeMatchupModifierTable[attackerID, victomID];
     }
 }
+
+    void Start()
+    {
+        InitTable();
+        // the reason of making player turn 2 is simply for testing.
+        playerTurn = 2;
+        actionStage = ActionStage.BattleStage;
+
+        player1 = new Player();
+        player2 = new Player();
+
+        var p1p1 = Instantiate(player1Pokemon1);
+        var p1p2 = Instantiate(player1Pokemon2);
+
+        var p2p1 = Instantiate(player2Pokemon1);
+        var p2p2 = Instantiate(player2Pokemon2);
+
+        player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>(), p1p2.GetComponent<Pokemon>()});
+        player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>(), p2p2.GetComponent<Pokemon>()});
+        /*
+            Debug.Log("Player1's pokemon: ");
+            player1.currentPokemon.PrintStatus();
+            Debug.Log("Player2's pokemon: ");
+            player2.currentPokemon.PrintStatus();
+    private void InitTable()
+    {
+        /*
+            same length as the the number of types 
+            0-Normal, 1-Electric, 2-Fire, 3-Grass, 4-Ground, 5-Water
+        */
+        typeMatchupModifierTable = new float[6, 6];
+        for(int i = 0; i < 6; i++)
+        {
+            for (int j = 0; j < 6; j++)
+            {
+                typeMatchupModifierTable[i, j] = 1;
+            }
+        }
+
+        // specific cases
+        // normal
+        // electric
+        typeMatchupModifierTable[1, 5] = 2f;
+        typeMatchupModifierTable[1, 1] = 0.5f;
+        typeMatchupModifierTable[1, 3] = 0.5f;
+        typeMatchupModifierTable[1, 4] = 0f;  // immune
+
+        // fire
+        typeMatchupModifierTable[2, 3] = 2f;
+        typeMatchupModifierTable[2, 5] = 0.5f;
+
+        // grass
+        typeMatchupModifierTable[3, 4] = 2f;
+        typeMatchupModifierTable[3, 5] = 2f;
+        typeMatchupModifierTable[3, 2] = 0.5f;
+        typeMatchupModifierTable[3, 3] = 0.5f;
+
+        // ground
+        typeMatchupModifierTable[4, 1] = 2f;
+        typeMatchupModifierTable[4, 2] = 2f;
+        typeMatchupModifierTable[4, 3] = 0.5f;
+
+        //water
+        typeMatchupModifierTable[5, 2] = 2f;
+        typeMatchupModifierTable[5, 4] = 2f;
+        typeMatchupModifierTable[5, 5] = 0.5f;
+        typeMatchupModifierTable[5, 3] = 0.5f;
+    public void SelectSkill(int ID)
+    {
+        Player p = GetCurrentPlayer();
+        p.currentPokemon.selectedSkill = p.currentPokemon.skills[ID];
+        Debug.Log(p.currentPokemon.name + "'s current skill is " + p.currentPokemon.selectedSkill.name);
+    } 
+    public void CalculateBattle()
+    {
+        // determine which pokemon should attack first
+        var p1 = GetCurrentPlayer().currentPokemon;
+        var p2 = GetPlayer(playerTurn == 1 ? 2 : 1).currentPokemon;
+        // calculate the damage this pokemon deals on the other one and check its state before the calculation
+        if(p1.status == Pokemon.PokemonStatus.Normal || p1.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            if(p1.selectedSkill.type != Skill.SkillType.Poison)
+            {
+                p2.TakeDamage(CalculateDamage(p1, p2));
+                p1.selectedSkill.pp--;
+            }else
+            {
+                p2.status = Pokemon.PokemonStatus.Poisoned;
+            }
+        }
+        else
+        {
+            // wo dont do anything for now
+        }
+        // switch to consider the other pokemon, and check if it is dead or at unattackable state
+        if (p2.status == Pokemon.PokemonStatus.Normal || p2.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            if (p2.selectedSkill.type != Skill.SkillType.Poison)
+            {
+                p1.TakeDamage(CalculateDamage(p2, p1));
+                p2.selectedSkill.pp--;
+            }
+            else
+            {
+                p1.status = Pokemon.PokemonStatus.Poisoned;
+            }
+        }
+
+        // calculate poison
+        if(p1.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            p1.TakeDamage(p1.health / 16);
+        }
+
+        if(p2.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            p2.TakeDamage(p1.health / 16);
+        }
+
+        Debug.Log("--------result status--------");
+        p1.PrintHealth();
+        p2.PrintHealth();
+        // end battle.
+    public void CheckFeint()
+    {
+        // if it is, then we should somehow spawn the next pokemon in the list
+        if (player2.currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            // we need to swtich the pokemon here
+            player2.SwitchPokemon();
+            Debug.Log("Player2 pokemon feint" + ", current: " + player2.currentPokemon.name);
+            // visually update
+        }
+
+        // check if the last pokemon is dead
+        if(player1.currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            // if it is, then we should somehow spawn the next pokemon in the list
+            player1.SwitchPokemon();
+            Debug.Log("Player1 pokemon feint" + ", current: " + player1.currentPokemon.name);
+            // visually update
+        }
+    }
+
+    /// <summary>
+    /// This method returns the damange that the attacker should deal based off of the pokemon damage formula
+    /// Pass the victom incase this is a poison based attack
+    /// </summary>
+    /// <param name="attacker"></param>
+    /// <param name="victom"></param>
