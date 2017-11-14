@@ -29,6 +29,9 @@ public class Model : Element{
     #endregion
 
     #region player
+        // TODO: write comments
+        // - how is player1 and player2 assigned? etc
+        // - make it EASIER FOR PEOPLE TO COLLABORATE WITH YOU
     private Player player1;
     private Player player2;
     public Player GetPlayer(int ID)
@@ -69,27 +72,30 @@ public class Model : Element{
     void Start()
     {
         InitTable();
-        // the reason of making player turn 2 is simply for testing.
-        playerTurn = 2;
-        actionStage = ActionStage.BattleStage;
 
         player1 = new Player();
         player2 = new Player();
 
         var p1p1 = Instantiate(player1Pokemon1);
-        var p1p2 = Instantiate(player1Pokemon2);
-
         var p2p1 = Instantiate(player2Pokemon1);
-        var p2p2 = Instantiate(player2Pokemon2);
 
-        player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>(), p1p2.GetComponent<Pokemon>()});
-        player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>(), p2p2.GetComponent<Pokemon>()});
+        player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>() });
+        player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>() });
         /*
             Debug.Log("Player1's pokemon: ");
             player1.currentPokemon.PrintStatus();
             Debug.Log("Player2's pokemon: ");
             player2.currentPokemon.PrintStatus();
         */
+        SelectSkill(3);
+        ChangePlayerTurn();
+        SelectSkill(2);
+        TestBattle();
+    }
+
+    private void TestBattle()
+    {
+        CalculateBattle();
     }
 
     private void InitTable()
@@ -146,7 +152,7 @@ public class Model : Element{
         Player p = GetCurrentPlayer();
         p.currentPokemon.selectedSkill = p.currentPokemon.skills[ID];
         Debug.Log(p.currentPokemon.name + "'s current skill is " + p.currentPokemon.selectedSkill.name);
-    } 
+    }
     
     /// <summary>
     /// Should only be called at the beginning or end of the battle stage, by battlestage handler
@@ -185,6 +191,17 @@ public class Model : Element{
                 p1.status = Pokemon.PokemonStatus.Poisoned;
             }
         }
+        // if it is, then we should somehow spawn the next pokemon in the list
+        else if (p2.status == Pokemon.PokemonStatus.Feint)
+        {
+            // we need to swtich the pokemon here
+        }
+
+        // check if the last pokemon is dead
+        if(p1.status == Pokemon.PokemonStatus.Feint)
+        {
+            // if it is, then we should somehow spawn the next pokemon in the list
+        }
 
         // calculate poison
         if(p1.status == Pokemon.PokemonStatus.Poisoned)
@@ -198,30 +215,9 @@ public class Model : Element{
         }
 
         Debug.Log("--------result status--------");
-        p1.PrintHealth();
-        p2.PrintHealth();
+        p1.PrintStatus();
+        p2.PrintStatus();
         // end battle.
-    }
-
-    public void CheckFeint()
-    {
-        // if it is, then we should somehow spawn the next pokemon in the list
-        if (player2.currentPokemon.status == Pokemon.PokemonStatus.Feint)
-        {
-            // we need to swtich the pokemon here
-            player2.SwitchPokemon();
-            Debug.Log("Player2 pokemon feint" + ", current: " + player2.currentPokemon.name);
-            // visually update
-        }
-
-        // check if the last pokemon is dead
-        if(player1.currentPokemon.status == Pokemon.PokemonStatus.Feint)
-        {
-            // if it is, then we should somehow spawn the next pokemon in the list
-            player1.SwitchPokemon();
-            Debug.Log("Player1 pokemon feint" + ", current: " + player1.currentPokemon.name);
-            // visually update
-        }
     }
 
     /// <summary>
@@ -231,12 +227,12 @@ public class Model : Element{
     /// <param name="attacker"></param>
     /// <param name="victom"></param>
     /// <returns></returns>
-    private float CalculateDamage(Pokemon attacker, Pokemon victom)
+    private float CalculateDamage(Pokemon attacker, Pokemon victom) // TODO: correct "victom" to "victim"
     {
         float damage = 0;
         float modifier = CalculateModifier(attacker.type, victom.type);
         float level = 50f;  // assume all pokemon are 50 levels
-
+  
         damage = ((((level * 2) / 5) + 2) * attacker.selectedSkill.damage * attacker.attack / victom.defense) / 50 + 2;
         damage *= modifier;
         return damage;
@@ -255,3 +251,153 @@ public class Model : Element{
         return typeMatchupModifierTable[attackerID, victomID];
     }
 }
+
+    void Start()
+    {
+        InitTable();
+        // the reason of making player turn 2 is simply for testing.
+        playerTurn = 2;
+        actionStage = ActionStage.BattleStage;
+
+        player1 = new Player();
+        player2 = new Player();
+
+        var p1p1 = Instantiate(player1Pokemon1);
+        var p1p2 = Instantiate(player1Pokemon2);
+
+        var p2p1 = Instantiate(player2Pokemon1);
+        var p2p2 = Instantiate(player2Pokemon2);
+
+        player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>(), p1p2.GetComponent<Pokemon>()});
+        player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>(), p2p2.GetComponent<Pokemon>()});
+        /*
+            Debug.Log("Player1's pokemon: ");
+            player1.currentPokemon.PrintStatus();
+            Debug.Log("Player2's pokemon: ");
+            player2.currentPokemon.PrintStatus();
+    private void InitTable()
+    {
+        /*
+            same length as the the number of types 
+            0-Normal, 1-Electric, 2-Fire, 3-Grass, 4-Ground, 5-Water
+        */
+        typeMatchupModifierTable = new float[6, 6];
+        for(int i = 0; i < 6; i++)
+        {
+            for (int j = 0; j < 6; j++)
+            {
+                typeMatchupModifierTable[i, j] = 1;
+            }
+        }
+
+        // specific cases
+        // normal
+        // electric
+        typeMatchupModifierTable[1, 5] = 2f;
+        typeMatchupModifierTable[1, 1] = 0.5f;
+        typeMatchupModifierTable[1, 3] = 0.5f;
+        typeMatchupModifierTable[1, 4] = 0f;  // immune
+
+        // fire
+        typeMatchupModifierTable[2, 3] = 2f;
+        typeMatchupModifierTable[2, 5] = 0.5f;
+
+        // grass
+        typeMatchupModifierTable[3, 4] = 2f;
+        typeMatchupModifierTable[3, 5] = 2f;
+        typeMatchupModifierTable[3, 2] = 0.5f;
+        typeMatchupModifierTable[3, 3] = 0.5f;
+
+        // ground
+        typeMatchupModifierTable[4, 1] = 2f;
+        typeMatchupModifierTable[4, 2] = 2f;
+        typeMatchupModifierTable[4, 3] = 0.5f;
+
+        //water
+        typeMatchupModifierTable[5, 2] = 2f;
+        typeMatchupModifierTable[5, 4] = 2f;
+        typeMatchupModifierTable[5, 5] = 0.5f;
+        typeMatchupModifierTable[5, 3] = 0.5f;
+    public void SelectSkill(int ID)
+    {
+        Player p = GetCurrentPlayer();
+        p.currentPokemon.selectedSkill = p.currentPokemon.skills[ID];
+        Debug.Log(p.currentPokemon.name + "'s current skill is " + p.currentPokemon.selectedSkill.name);
+    } 
+    public void CalculateBattle()
+    {
+        // determine which pokemon should attack first
+        var p1 = GetCurrentPlayer().currentPokemon;
+        var p2 = GetPlayer(playerTurn == 1 ? 2 : 1).currentPokemon;
+        // calculate the damage this pokemon deals on the other one and check its state before the calculation
+        if(p1.status == Pokemon.PokemonStatus.Normal || p1.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            if(p1.selectedSkill.type != Skill.SkillType.Poison)
+            {
+                p2.TakeDamage(CalculateDamage(p1, p2));
+                p1.selectedSkill.pp--;
+            }else
+            {
+                p2.status = Pokemon.PokemonStatus.Poisoned;
+            }
+        }
+        else
+        {
+            // wo dont do anything for now
+        }
+        // switch to consider the other pokemon, and check if it is dead or at unattackable state
+        if (p2.status == Pokemon.PokemonStatus.Normal || p2.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            if (p2.selectedSkill.type != Skill.SkillType.Poison)
+            {
+                p1.TakeDamage(CalculateDamage(p2, p1));
+                p2.selectedSkill.pp--;
+            }
+            else
+            {
+                p1.status = Pokemon.PokemonStatus.Poisoned;
+            }
+        }
+
+        // calculate poison
+        if(p1.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            p1.TakeDamage(p1.health / 16);
+        }
+
+        if(p2.status == Pokemon.PokemonStatus.Poisoned)
+        {
+            p2.TakeDamage(p1.health / 16);
+        }
+
+        Debug.Log("--------result status--------");
+        p1.PrintHealth();
+        p2.PrintHealth();
+        // end battle.
+    public void CheckFeint()
+    {
+        // if it is, then we should somehow spawn the next pokemon in the list
+        if (player2.currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            // we need to swtich the pokemon here
+            player2.SwitchPokemon();
+            Debug.Log("Player2 pokemon feint" + ", current: " + player2.currentPokemon.name);
+            // visually update
+        }
+
+        // check if the last pokemon is dead
+        if(player1.currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            // if it is, then we should somehow spawn the next pokemon in the list
+            player1.SwitchPokemon();
+            Debug.Log("Player1 pokemon feint" + ", current: " + player1.currentPokemon.name);
+            // visually update
+        }
+    }
+
+    /// <summary>
+    /// This method returns the damange that the attacker should deal based off of the pokemon damage formula
+    /// Pass the victom incase this is a poison based attack
+    /// </summary>
+    /// <param name="attacker"></param>
+    /// <param name="victom"></param>
