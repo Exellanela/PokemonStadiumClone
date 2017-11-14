@@ -8,7 +8,7 @@ public class Pokemon : Element {
     [HideInInspector]
     public new string name;
     [HideInInspector]
-    public float health, attack, defense;
+    public float health, attack, defense, maxHealth;
 
     [HideInInspector]
     public bool isFeint = false;
@@ -46,7 +46,7 @@ public class Pokemon : Element {
     /// </summary>
     protected virtual void SetUpPokemon()
     {
-
+        maxHealth = health;
     }
 
     /// <summary>
@@ -76,6 +76,11 @@ public class Pokemon : Element {
         {
             Debug.Log(s.name + ", " + s.damage + ", " + s.pp + ", " + s.type);
         }
+    }
+
+    public void PrintHealth()
+    {
+        Debug.Log(name + ": " + health);
     }
 
     public void TakeDamage(float d)

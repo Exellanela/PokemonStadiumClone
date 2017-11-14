@@ -69,30 +69,27 @@ public class Model : Element{
     void Start()
     {
         InitTable();
+        // the reason of making player turn 2 is simply for testing.
+        playerTurn = 2;
+        actionStage = ActionStage.BattleStage;
 
         player1 = new Player();
         player2 = new Player();
 
         var p1p1 = Instantiate(player1Pokemon1);
-        var p2p1 = Instantiate(player2Pokemon1);
+        var p1p2 = Instantiate(player1Pokemon2);
 
-        player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>() });
-        player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>() });
+        var p2p1 = Instantiate(player2Pokemon1);
+        var p2p2 = Instantiate(player2Pokemon2);
+
+        player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>(), p1p2.GetComponent<Pokemon>()});
+        player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>(), p2p2.GetComponent<Pokemon>()});
         /*
             Debug.Log("Player1's pokemon: ");
             player1.currentPokemon.PrintStatus();
             Debug.Log("Player2's pokemon: ");
             player2.currentPokemon.PrintStatus();
         */
-        SelectSkill(3);
-        ChangePlayerTurn();
-        SelectSkill(2);
-        TestBattle();
-    }
-
-    private void TestBattle()
-    {
-        CalculateBattle();
     }
 
     private void InitTable()
@@ -149,7 +146,7 @@ public class Model : Element{
         Player p = GetCurrentPlayer();
         p.currentPokemon.selectedSkill = p.currentPokemon.skills[ID];
         Debug.Log(p.currentPokemon.name + "'s current skill is " + p.currentPokemon.selectedSkill.name);
-    }
+    } 
     
     /// <summary>
     /// Should only be called at the beginning or end of the battle stage, by battlestage handler
@@ -188,17 +185,6 @@ public class Model : Element{
                 p1.status = Pokemon.PokemonStatus.Poisoned;
             }
         }
-        // if it is, then we should somehow spawn the next pokemon in the list
-        else if (p2.status == Pokemon.PokemonStatus.Feint)
-        {
-            // we need to swtich the pokemon here
-        }
-
-        // check if the last pokemon is dead
-        if(p1.status == Pokemon.PokemonStatus.Feint)
-        {
-            // if it is, then we should somehow spawn the next pokemon in the list
-        }
 
         // calculate poison
         if(p1.status == Pokemon.PokemonStatus.Poisoned)
@@ -212,9 +198,30 @@ public class Model : Element{
         }
 
         Debug.Log("--------result status--------");
-        p1.PrintStatus();
-        p2.PrintStatus();
+        p1.PrintHealth();
+        p2.PrintHealth();
         // end battle.
+    }
+
+    public void CheckFeint()
+    {
+        // if it is, then we should somehow spawn the next pokemon in the list
+        if (player2.currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            // we need to swtich the pokemon here
+            player2.SwitchPokemon();
+            Debug.Log("Player2 pokemon feint" + ", current: " + player2.currentPokemon.name);
+            // visually update
+        }
+
+        // check if the last pokemon is dead
+        if(player1.currentPokemon.status == Pokemon.PokemonStatus.Feint)
+        {
+            // if it is, then we should somehow spawn the next pokemon in the list
+            player1.SwitchPokemon();
+            Debug.Log("Player1 pokemon feint" + ", current: " + player1.currentPokemon.name);
+            // visually update
+        }
     }
 
     /// <summary>
