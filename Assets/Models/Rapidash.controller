@@ -8,30 +8,24 @@ AnimatorController:
   m_Name: Rapidash
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Released
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: Fainted
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Damage
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -64,7 +58,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -399,19 +393,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102853997153316382}
-    m_Position: {x: 48, y: 192, z: 0}
+    m_Position: {x: 48, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102579382675424838}
     m_Position: {x: 288, y: 192, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102471340508587504}
-    m_Position: {x: 288, y: 108, z: 0}
+    m_Position: {x: 264, y: 72, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102126667995938252}
-    m_Position: {x: 204, y: -36, z: 0}
+    m_Position: {x: 96, y: -48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102256147473861766}
-    m_Position: {x: 420, y: -36, z: 0}
+    m_Position: {x: 336, y: -72, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102726050354885434}
     m_Position: {x: 552, y: 108, z: 0}
@@ -421,7 +415,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 48, y: 120, z: 0}
+  m_EntryPosition: {x: -48, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102853997153316382}
+  m_DefaultState: {fileID: 1102471340508587504}

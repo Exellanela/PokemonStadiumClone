@@ -15,7 +15,6 @@ public class TestCameraScript : MonoBehaviour {
 	public Transform pos01;
 	public Transform pos02;
 
-
 	void Update() {
 		transform.LookAt (stadium);
 		transform.Translate (Vector3.right * Time.deltaTime * speed);
