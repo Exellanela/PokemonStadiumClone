@@ -29,6 +29,9 @@ public class Model : Element{
     #endregion
 
     #region player
+    public Transform poke1Position;
+    public Transform poke2Position;
+
     private Player player1;
     private Player player2;
     public Player GetPlayer(int ID)
@@ -76,11 +79,12 @@ public class Model : Element{
         player1 = new Player();
         player2 = new Player();
 
-        var p1p1 = Instantiate(player1Pokemon1);
-        var p1p2 = Instantiate(player1Pokemon2);
+        // TODO: fix the second pokemon positions for each player
+        var p1p1 = Instantiate(player1Pokemon1, poke1Position.position, poke1Position.rotation);
+        var p1p2 = Instantiate(player1Pokemon2, poke1Position.position, poke1Position.rotation);
 
-        var p2p1 = Instantiate(player2Pokemon1);
-        var p2p2 = Instantiate(player2Pokemon2);
+        var p2p1 = Instantiate(player2Pokemon1, poke2Position.position, poke2Position.rotation);
+        var p2p2 = Instantiate(player2Pokemon2, poke2Position.position, poke2Position.rotation);
 
         player1.SetPokemons(new Pokemon[] { p1p1.GetComponent<Pokemon>(), p1p2.GetComponent<Pokemon>()});
         player2.SetPokemons(new Pokemon[] { p2p1.GetComponent<Pokemon>(), p2p2.GetComponent<Pokemon>()});

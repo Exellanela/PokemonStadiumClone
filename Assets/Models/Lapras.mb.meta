@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 34c43b0a1ecea7d45b6438bf49e8af8a
-timeCreated: 1510632550
+guid: fe9e396f7eb2146f0a127878f6612f60
+timeCreated: 1511395849
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -54,19 +54,20 @@ ModelImporter:
     400044: //RootNode
     400046: pCube20
     4300000: pCube20
+    7400000: Lapras Idle
     9500000: //RootNode
     13700000: pCube20
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blue
-    second: {fileID: 2100000, guid: e18d981a0fc739e4eb84a48ea6ec68be, type: 2}
+      name: Shell
+    second: {fileID: 2100000, guid: 84d0220d3b1a547bbb3940db91bb9eb4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: e0d279fc9e15e554a8f3f1a1b346b974, type: 2}
+      name: Skin
+    second: {fileID: 2100000, guid: 5e65413e01a82464fb8fd453ea56eda9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -92,7 +93,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Lapras Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
