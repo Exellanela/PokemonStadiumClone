@@ -18,10 +18,14 @@ public class BattleStageHandler : Handler {
     public Transform statusBar2;
     public Transform nameBar2;
 
+    public Gradient gradientForHealthBar;
+
     // keep track of what their respective health were before calculation
     private float originalHealth1;
     private float originalHealth2;
 
+    // indicates whether the pokemon animations are finished
+    private bool hasFinishedAnimations = true;
     private bool isNewTurn = false;
 
     public override void HandleStage(int turn)
@@ -107,11 +111,19 @@ public class BattleStageHandler : Handler {
         ch1 = Mathf.Clamp(ch1, p1.health, originalHealth1);
         ch2 = Mathf.Clamp(ch2, p2.health, originalHealth2);
 
+        ch1 = Mathf.Clamp(ch1, 0, p1.maxHealth);
+        ch2 = Mathf.Clamp(ch2, 0, p2.maxHealth);
+
+        float percentage1 = Mathf.Clamp01(ch1 / p1.maxHealth);
+        float percentage2 = Mathf.Clamp01(ch2 / p2.maxHealth);
+        // current health
         healthBar1.GetChild(2).GetComponent<Text>().text = ((int)ch1).ToString();
-        healthBar1.GetChild(0).GetComponent<Image>().fillAmount = ch1 / p1.maxHealth;
+        healthBar1.GetChild(0).GetComponent<Image>().fillAmount = percentage1;
+        healthBar1.GetChild(0).GetComponent<Image>().color = gradientForHealthBar.Evaluate(percentage1);
 
         healthBar2.GetChild(2).GetComponent<Text>().text = ((int)ch2).ToString();
-        healthBar2.GetChild(0).GetComponent<Image>().fillAmount = ch2 / p2.maxHealth;
+        healthBar2.GetChild(0).GetComponent<Image>().fillAmount = percentage2;
+        healthBar2.GetChild(0).GetComponent<Image>().color = gradientForHealthBar.Evaluate(percentage2); // change color based on health
 
         if (ch1 == p1.health && ch2 == p2.health)
         {

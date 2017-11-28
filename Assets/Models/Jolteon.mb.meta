@@ -1,44 +1,100 @@
 fileFormatVersion: 2
-guid: 0b9c68b0901000c4491da28bd6c59552
-timeCreated: 1510632550
+guid: 2f76a2d326ecf4f02ab8e00adf432bfc
+timeCreated: 1511395849
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Husky:pCube13
-    100002: Husky:pPipe1
-    100004: Husky:pPipe2
-    100006: Husky:pPipe3
-    100008: //RootNode
-    400000: Husky:pCube13
-    400002: Husky:pPipe1
-    400004: Husky:pPipe2
-    400006: Husky:pPipe3
-    400008: //RootNode
-    2300000: Husky:pCube13
-    2300002: Husky:pPipe1
-    2300004: Husky:pPipe2
-    2300006: Husky:pPipe3
-    3300000: Husky:pCube13
-    3300002: Husky:pPipe1
-    3300004: Husky:pPipe2
-    3300006: Husky:pPipe3
-    4300000: Husky:pCube13
-    4300002: Husky:pPipe1
-    4300004: Husky:pPipe2
-    4300006: Husky:pPipe3
+    100000: chest
+    100002: Head
+    100004: Husky:pCube13
+    100006: Husky:pPipe1
+    100008: Husky:pPipe2
+    100010: Husky:pPipe3
+    100012: ikHandle1
+    100014: ikHandle2
+    100016: ikHandle3
+    100018: ikHandle4
+    100020: jaw
+    100022: joint1
+    100024: joint2
+    100026: Jolteon
+    100028: //RootNode
+    100030: left_elbow1
+    100032: left_foot1
+    100034: left_hind1
+    100036: left_knee1
+    100038: left_paw1
+    100040: left_shoulder1
+    100042: neck
+    100044: right_elbow
+    100046: right_foot
+    100048: right_hind
+    100050: right_knee
+    100052: right_paw
+    100054: right_shoulder
+    100056: root
+    100058: spine_end
+    100060: spine_mid
+    100062: Husky:pPipe1 1
+    100064: Husky:transform1
+    100066: Husky:transform2
+    100068: Husky:transform3
+    100070: Husky:transform4
+    100072: polySurface4
+    100074: transform1
+    400000: chest
+    400002: Head
+    400004: Husky:pCube13
+    400006: Husky:pPipe1
+    400008: Husky:pPipe2
+    400010: Husky:pPipe3
+    400012: ikHandle1
+    400014: ikHandle2
+    400016: ikHandle3
+    400018: ikHandle4
+    400020: jaw
+    400022: joint1
+    400024: joint2
+    400026: //RootNode
+    400028: Jolteon
+    400030: left_elbow1
+    400032: left_foot1
+    400034: left_hind1
+    400036: left_knee1
+    400038: left_paw1
+    400040: left_shoulder1
+    400042: neck
+    400044: right_elbow
+    400046: right_foot
+    400048: right_hind
+    400050: right_knee
+    400052: right_paw
+    400054: right_shoulder
+    400056: root
+    400058: spine_end
+    400060: spine_mid
+    400062: Husky:pPipe1 1
+    400064: Husky:transform1
+    400066: Husky:transform2
+    400068: Husky:transform3
+    400070: Husky:transform4
+    400072: polySurface4
+    400074: transform1
+    4300000: Husky:pPipe1
+    4300002: Husky:pPipe2
+    4300004: Husky:pPipe3
+    7400000: Take 001
     9500000: //RootNode
+    13700000: Husky:pPipe1
+    13700002: Husky:pPipe2
+    13700004: Husky:pPipe3
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert4
-    second: {fileID: 2100000, guid: 9489081c9f419de41ac26bc4d03c35bb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: phongE1
-    second: {fileID: 2100000, guid: bd7f3d437bafa7842b4a86fd424e9a0e, type: 2}
+    second: {fileID: 2100000, guid: 67d10301fe5734698bed23d6607576d0, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

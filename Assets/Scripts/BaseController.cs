@@ -21,7 +21,12 @@ public class BaseController : Element {
     private Handler deathStageHandler;
     [SerializeField]
     private Handler battleStageHandler;
-    
+
+    /// <summary>
+    /// This one is set to false when you want to let the handler stop to wait for other things to finish
+    /// Usually set to false when the spawning animation is playing
+    /// </summary>
+    public bool canUpdateHandler = true;
 
     private Handler currentHandler;
     public Handler GetCurrentHandler() { return currentHandler; }
@@ -68,7 +73,8 @@ public class BaseController : Element {
             newHandler.OnEnterStage();
             currentHandler = newHandler;
         }
-        currentHandler.HandleStage(getApp().model.GetPlayerTurn());
+        if(canUpdateHandler)
+            currentHandler.HandleStage(getApp().model.GetPlayerTurn());
     }
 
     /// <summary>
