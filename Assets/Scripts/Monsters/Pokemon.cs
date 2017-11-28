@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pokemon : Element {
-
+    
     #region pokemon stats
     [HideInInspector]
     public new string name;
@@ -50,22 +50,6 @@ public class Pokemon : Element {
     }
 
     /// <summary>
-    /// Update visual effect when hit
-    /// </summary>
-    public virtual void GetDamageVisual()
-    {
-
-    }
-    
-    /// <summary>
-    /// Update visual effect when attacking
-    /// </summary>
-    public virtual void AttackVisual()
-    {
-
-    }
-
-    /// <summary>
     /// Print in console the data of this pokemon
     /// </summary>
     public void PrintStatus()
@@ -109,5 +93,56 @@ public class Pokemon : Element {
         Feint,
         Poisoned,
         Paralyzed
+    }
+
+    /*
+        these two should be started from the battle stage handler
+    */
+    public bool isPlayingAnim = false;
+    public virtual IEnumerator AttackAnimPlay() {
+        var anim = transform.GetChild(0).GetComponent<Animator>();
+        if(anim == null)
+        {
+            Debug.LogWarning("There is no animator attached to this pokemon");
+            yield return null;
+        }else
+        {
+            isPlayingAnim = true;
+            anim.SetBool("Attacking", true);
+            // this should be fixed later on
+            float counter = anim.GetCurrentAnimatorStateInfo(0).length - 1f;
+            while (counter > 0)
+            {
+                counter -= Time.deltaTime;
+                yield return null;
+            }
+            anim.SetBool("Attacking", false);
+            isPlayingAnim = false;
+            yield return null;
+        }
+    }
+
+    public virtual IEnumerator HitAnimPlay() {
+        var anim = transform.GetChild(0).GetComponent<Animator>();
+        if (anim == null)
+        {
+            Debug.LogWarning("There is no animator attached to this pokemon");
+            yield return null;
+        }
+        else
+        {
+            isPlayingAnim = true;
+            anim.SetBool("Damage", true);
+            // this should be fixed later on
+            float counter = anim.GetCurrentAnimatorStateInfo(0).length - 1f;
+            while (counter > 0)
+            {
+                counter -= Time.deltaTime;
+                yield return null;
+            }
+            anim.SetBool("Damage", false);
+            isPlayingAnim = false;
+            yield return null;
+        }
     }
 }
