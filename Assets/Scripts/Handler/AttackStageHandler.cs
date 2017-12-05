@@ -94,25 +94,25 @@ public class AttackStageHandler : Handler
         if(turn == 1)
         {
             // player1 stage
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 getApp().model.SelectSkill(0);
                 currentPlayer.isReady = true;
                 OnExitStage(Model.ActionStage.BattleStage);
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 getApp().model.SelectSkill(1);
                 currentPlayer.isReady = true;
                 OnExitStage(Model.ActionStage.BattleStage);
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 getApp().model.SelectSkill(2);
                 currentPlayer.isReady = true;
                 OnExitStage(Model.ActionStage.BattleStage);
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 getApp().model.SelectSkill(3);
                 currentPlayer.isReady = true;
@@ -121,25 +121,25 @@ public class AttackStageHandler : Handler
         }else
         {
             // player2 stage
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 getApp().model.SelectSkill(0);
                 currentPlayer.isReady = true;
                 OnExitStage(Model.ActionStage.BattleStage);
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 getApp().model.SelectSkill(1);
                 currentPlayer.isReady = true;
                 OnExitStage(Model.ActionStage.BattleStage);
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 getApp().model.SelectSkill(2);
                 currentPlayer.isReady = true;
                 OnExitStage(Model.ActionStage.BattleStage);
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 getApp().model.SelectSkill(3);
                 currentPlayer.isReady = true;

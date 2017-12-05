@@ -60,19 +60,19 @@ public class SelectionStageHandler : Handler
                 // go to switch pokemon
                 OnExitStage(Model.ActionStage.SwitchStage);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            else if (Input.GetKeyDown(KeyCode.Alpha0))
             {
                 // go to bag
                 OnExitStage(Model.ActionStage.BagStage);
             }
         }else
         {
-            if (Input.GetKeyDown(KeyCode.Alpha8))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 // go to battle
                 OnExitStage(Model.ActionStage.AttackStage);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha9))
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 // go to switch pokemon
                 OnExitStage(Model.ActionStage.SwitchStage);
