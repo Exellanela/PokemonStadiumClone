@@ -4,7 +4,7 @@ using UnityEngine;
 
 //IGNORE THIS SCRIPT
 public class tryingStuff : MonoBehaviour {
-	
+	/*
 	public bool top;
 
 	Vector3 startPos;
@@ -43,6 +43,14 @@ public class tryingStuff : MonoBehaviour {
 				Debug.Log ("bot on");
 				pos.y += 0.1f * Time.deltaTime * speed;
 			}
+		}
+	}
+	*/
+
+
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.A)) {
+			AtkFXMain.me.PlayParticles()
 		}
 	}
 }

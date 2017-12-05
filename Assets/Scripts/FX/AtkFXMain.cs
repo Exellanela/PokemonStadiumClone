@@ -36,6 +36,19 @@ public class AtkFXMain : MonoBehaviour {
 	public static ParticleSystem toxicHit;
 	public static ParticleSystem waterHit;
 
+	/*
+	public static GameObject acidHit;
+	public static GameObject emberHit;
+	public static GameObject exploHit;
+	public static GameObject iceHit;
+	public static GameObject megaDrainHit;
+	public static GameObject rockHit;
+	public static GameObject swiftHit;
+	public static GameObject thunderHit;
+	public static GameObject toxicHit;
+	public static GameObject waterHit;
+	*/
+
 	//vars that this code reads to define the above vars
 	public ParticleSystem slam;
 	public ParticleSystem hit;
