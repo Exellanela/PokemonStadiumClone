@@ -12,10 +12,12 @@ public class testParticles : MonoBehaviour {
 	public static ParticleSystem dustPart;
 	public static ParticleSystem acidPart;
 	public static ParticleSystem toxicPart;
+	public static ParticleSystem swiftPart;
 
 	public static ParticleSystem wtrHitPart;
 	public static ParticleSystem acidHit;
 	public static ParticleSystem toxicHit;
+	public static ParticleSystem swiftHit;
 
 	public ParticleSystem slam;
 	public ParticleSystem hit;
@@ -24,10 +26,12 @@ public class testParticles : MonoBehaviour {
 	public ParticleSystem dust;
 	public ParticleSystem acidA;
 	public ParticleSystem toxicA;
+	public ParticleSystem swiftA;
 
 	public ParticleSystem wtrH;
 	public ParticleSystem acidH;
 	public ParticleSystem toxicH;
+	public ParticleSystem swiftH;
 
 	public static testParticles me;
 
