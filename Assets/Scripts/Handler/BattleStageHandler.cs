@@ -51,23 +51,21 @@ public class BattleStageHandler : Handler {
 
     public override void HandleStage(int turn)
     {
-        if (!isNewTurn)
+        if (!isTheFirstRound)
         {
-            getApp().model.ChangePlayerTurn();
-            OnExitStage(Model.ActionStage.SelectionStage);
-        }
-        else
-        {
-            /*
-            if (!Camera.main.transform.parent.GetChild(1).GetComponent<ImageEffectController>().isStillProcessing && !hasFinishedAnimations)
+            if (!isNewTurn)
             {
-                ShowAnimation();
-            }*/
-            if (canRecieveInput)
-            {
+                getApp().model.ChangePlayerTurn();
                 OnExitStage(Model.ActionStage.SelectionStage);
-                isNewTurn = false;
-            }            
+            }
+            else
+            {
+                if (canRecieveInput)
+                {
+                    OnExitStage(Model.ActionStage.SelectionStage);
+                    isNewTurn = false;
+                }
+            }
         }
     }
 
@@ -86,12 +84,27 @@ public class BattleStageHandler : Handler {
         ch1 = originalHealth1;
         ch2 = originalHealth2;
 
-        if (getApp().model.GetPlayer(1).isReady && getApp().model.GetPlayer(2).isReady)
+        if (isTheFirstRound)
+        {
+            // if it is the first round, we want to play the animation for both pokemons
+            StartCoroutine(StartSpawningAnim());
+        }else if (getApp().model.GetPlayer(1).isReady && getApp().model.GetPlayer(2).isReady)
         {
             StartCoroutine(StartBattleStage());
         }
     }
 
+    private IEnumerator StartSpawningAnim()
+    {
+        while (true)
+        {
+            // this is used for testing
+            if (Input.GetKeyDown(KeyCode.Return))
+                break;
+            yield return null;
+        }
+        isTheFirstRound = false;
+    }
 
     private IEnumerator StartBattleStage()
     {
@@ -130,29 +143,37 @@ public class BattleStageHandler : Handler {
         // we update the health for the second player
         yield return new WaitForSeconds(1);
         yield return StartCoroutine(UpdateHealthBar(pl2));
-        
-        // we need to check for the feint information, if it feints, we need to spawn a new one fater we make a transition of this one feinting
-        // TODO: here->
 
-        // if the second player was not yet feint, we play the attack animation on it
-        yield return StartCoroutine(p2.AttackAnimPlay());
-        // show the name of the skill
-        yield return StartCoroutine(UpdateConversationPanel(pl2.ID, true));
+        if(p2.status == Pokemon.PokemonStatus.Feint)
+        {
+            // we need to do something about the feint status
+        }else
+        {
+            // if the second player was not yet feint, we play the attack animation on it
+            yield return StartCoroutine(p2.AttackAnimPlay());
+            // show the name of the skill
+            yield return StartCoroutine(UpdateConversationPanel(pl2.ID, true));
 
-        // we go back to the middle and then to the first player
-        yield return StartCoroutine(mainCam.transition2Origin());
-        yield return StartCoroutine(mainCam.transition2Point(pl1.ID));
+            // we go back to the middle and then to the first player
+            yield return StartCoroutine(mainCam.transition2Origin());
+            yield return StartCoroutine(mainCam.transition2Point(pl1.ID));
 
-        // we play the hit animation on the first player
-        yield return StartCoroutine(p1.HitAnimPlay());
-        // we update the conversational text
-        yield return StartCoroutine(UpdateConversationPanel(pl2.ID,false));
-        // we update the health for the first player
-        yield return new WaitForSeconds(1);
-        yield return StartCoroutine(UpdateHealthBar(pl1));
+            // we play the hit animation on the first player
+            yield return StartCoroutine(p1.HitAnimPlay());
+            // we update the conversational text
+            yield return StartCoroutine(UpdateConversationPanel(pl2.ID, false));
+            // we update the health for the first player
+            yield return new WaitForSeconds(1);
+            yield return StartCoroutine(UpdateHealthBar(pl1));
 
-        // go back to the original camerapos
-        yield return StartCoroutine(mainCam.transition2Origin());
+            if(p1.status == Pokemon.PokemonStatus.Feint)
+            {
+
+            }
+
+            // go back to the original camerapos
+            yield return StartCoroutine(mainCam.transition2Origin());
+        }      
 
         // we set the bool to true, meaning that we have successfully finished all the animation required for this stage.
         getApp().model.GetPlayer(1).isReady = false;
