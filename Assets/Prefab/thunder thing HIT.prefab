@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4013590169995594}
   - component: {fileID: 198633820336139882}
+  - component: {fileID: 114831735984086632}
   - component: {fileID: 199612665545400558}
   m_Layer: 0
   m_Name: thunder thing HIT
@@ -72,6 +73,17 @@ Transform:
   m_Father: {fileID: 4013590169995594}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114831735984086632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375853307145172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198151045220897024
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -132,7 +144,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 993457035
+  randomSeed: 1117555032
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3449,7 +3461,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1992948323
+  randomSeed: 2004528794
   InitialModule:
     serializedVersion: 3
     enabled: 1

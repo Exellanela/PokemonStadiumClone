@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4179744949908896}
   - component: {fileID: 198024630040470896}
+  - component: {fileID: 114627774277094422}
   - component: {fileID: 199233431874874986}
   m_Layer: 0
   m_Name: slamPart
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114627774277094422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334816519483020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198024630040470896
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +113,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -419431264
+  randomSeed: 863645814
   InitialModule:
     serializedVersion: 3
     enabled: 1

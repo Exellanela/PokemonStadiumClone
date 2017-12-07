@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4373925308228760}
   - component: {fileID: 198796690415419672}
+  - component: {fileID: 114146668801159930}
   - component: {fileID: 199200200528302814}
   m_Layer: 0
   m_Name: ice thing
@@ -134,6 +135,17 @@ Transform:
   m_Father: {fileID: 4373925308228760}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+--- !u!114 &114146668801159930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911093283164560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198581417700589342
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -194,7 +206,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2035907941
+  randomSeed: 533021399
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3511,7 +3523,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1132978302
+  randomSeed: 574546423
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6828,7 +6840,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 64927766
+  randomSeed: -1020518031
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10145,7 +10157,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2145262712
+  randomSeed: -704693507
   InitialModule:
     serializedVersion: 3
     enabled: 1

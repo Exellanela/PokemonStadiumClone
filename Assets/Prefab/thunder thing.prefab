@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4412712247003760}
   - component: {fileID: 198169968490277484}
+  - component: {fileID: 114140331962814080}
   - component: {fileID: 199341343791587420}
   m_Layer: 0
   m_Name: thunder thing
@@ -72,6 +73,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114140331962814080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621993537194866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198169968490277484
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -132,7 +144,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 920951390
+  randomSeed: 2139619837
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3455,7 +3467,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 132438682
+  randomSeed: -802063945
   InitialModule:
     serializedVersion: 3
     enabled: 1

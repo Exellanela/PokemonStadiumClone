@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4637439754388364}
   - component: {fileID: 198249906872421390}
+  - component: {fileID: 114952080353985932}
   - component: {fileID: 199040270551660108}
   m_Layer: 0
   m_Name: wtrGun
@@ -134,6 +135,17 @@ Transform:
   m_Father: {fileID: 4637439754388364}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+--- !u!114 &114952080353985932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986565594338348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198249906872421390
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -194,7 +206,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -931359171
+  randomSeed: -1149501083
   InitialModule:
     serializedVersion: 3
     enabled: 1

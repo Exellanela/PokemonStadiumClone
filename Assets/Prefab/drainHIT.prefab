@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4068218405439644}
   - component: {fileID: 198295746059498234}
+  - component: {fileID: 114403366978444200}
   - component: {fileID: 199757014131609412}
   m_Layer: 0
   m_Name: drainHIT
@@ -103,6 +104,17 @@ Transform:
   m_Father: {fileID: 4068218405439644}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114403366978444200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108238666486586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198295746059498234
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -163,7 +175,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1673110361
+  randomSeed: 1650429661
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3480,7 +3492,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -875503937
+  randomSeed: -1621750616
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6797,7 +6809,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 454961897
+  randomSeed: -1500884168
   InitialModule:
     serializedVersion: 3
     enabled: 1

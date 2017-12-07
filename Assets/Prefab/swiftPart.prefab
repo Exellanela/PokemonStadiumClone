@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4318540715227784}
   - component: {fileID: 198435409760308480}
+  - component: {fileID: 114565056909278248}
   - component: {fileID: 199576382249026616}
   m_Layer: 0
   m_Name: swiftPart
@@ -72,6 +73,17 @@ Transform:
   m_Father: {fileID: 4318540715227784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+--- !u!114 &114565056909278248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563783507663548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c4b1def1700140b5048054282c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198307627001979646
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3449,7 +3461,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -637861749
+  randomSeed: 54038217
   InitialModule:
     serializedVersion: 3
     enabled: 1
