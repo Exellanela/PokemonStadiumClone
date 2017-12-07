@@ -21,22 +21,8 @@ public class CameraTransition : Element {
         p1 = getApp().model.poke1Position.position;
         p2 = getApp().model.poke2Position.position; 
     }
-	
-    /// <summary>
-    /// Transition the camera from the original cameraPos to specified position
-    /// </summary>
-    /// <param name="ID">pokemon's position ID</param>
-	public void Transition(int ID)
-    {
-        if (!isTransitioning)
-        {
-            isTransitioning = true;
-            StartCoroutine(transition2Point(ID));
-            this.ID = ID;
-        }
-    }
 
-    private IEnumerator transition2Point(int ID)
+    public IEnumerator transition2Point(int ID)
     {
         float timer = 0f;
         while(timer <= 1)
@@ -51,21 +37,10 @@ public class CameraTransition : Element {
             yield return null;
         }
         isTransitioning = false;
+        this.ID = ID;
     }
 
-    /// <summary>
-    /// Transition back to the originalPos
-    /// </summary>
-    public void Transition()
-    {
-        if (!isTransitioning)
-        {
-            isTransitioning = true;
-            StartCoroutine(transition2Origin());
-        }
-    }
-
-    private IEnumerator transition2Origin()
+    public IEnumerator transition2Origin()
     {
         float timer = 0f;
         while (timer <= 1)
