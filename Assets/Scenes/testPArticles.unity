@@ -41110,11 +41110,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 291354924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea776141b853e9341a8f79b66a736294, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bca0ab3f29095749bc21bd3de671534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: 1
-  speed: 15
+  top: 0
 --- !u!114 &291354927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58422,16 +58421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17242a50dc30c149b342eb194299460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slam: {fileID: 269296069}
-  hit: {fileID: 856194071}
-  rockA: {fileID: 1948913491}
-  quickA: {fileID: 1926182073}
-  dust: {fileID: 1441690203}
-  acidA: {fileID: 2119187342}
-  toxicA: {fileID: 1441690203}
-  wtrH: {fileID: 1926182073}
-  acidH: {fileID: 1948913491}
-  toxicH: {fileID: 1441690203}
 --- !u!23 &447898088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58509,6 +58498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bca0ab3f29095749bc21bd3de671534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  top: 0
 --- !u!1 &523096874
 GameObject:
   m_ObjectHideFlags: 0
@@ -120382,7 +120372,6 @@ GameObject:
   - component: {fileID: 1784094998}
   - component: {fileID: 1784095001}
   - component: {fileID: 1784095000}
-  - component: {fileID: 1784094999}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -120408,19 +120397,6 @@ RectTransform:
   m_AnchoredPosition: {x: 31, y: -200}
   m_SizeDelta: {x: 434.89, y: 181.51}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1784094999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1784094997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea776141b853e9341a8f79b66a736294, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  top: 0
-  speed: 15
 --- !u!114 &1784095000
 MonoBehaviour:
   m_ObjectHideFlags: 0

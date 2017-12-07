@@ -28,4 +28,20 @@ public class moveScript4Testing : MonoBehaviour {
 		}
 	}
 	*/
+
+	public bool top;
+	Vector2 pos;
+
+	void Start() {
+		pos = gameObject.transform.position;
+	}
+
+	void Update() {
+		Debug.Log (pos.y);
+		if (Input.GetKeyDown(KeyCode.A)) {
+			if (pos.y < 36.3f) {
+				//transform.Translate (Vector3.down * 8);
+			}
+		}
+	}
 }
