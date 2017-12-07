@@ -76,8 +76,8 @@ public class Model : Element{
         playerTurn = 2;
         actionStage = ActionStage.BattleStage;
 
-        player1 = new Player();
-        player2 = new Player();
+        player1 = new Player(); player1.ID = 1;
+        player2 = new Player(); player2.ID = 2;
 
         // TODO: fix the second pokemon positions for each player
         var p1p1 = Instantiate(player1Pokemon1, poke1Position.position, poke1Position.rotation);
@@ -157,6 +157,10 @@ public class Model : Element{
     /// </summary>
     public void CalculateBattle()
     {
+        // damages<exerter><victom>
+        float d12 = 0;
+        float d21 = 0;
+
         // determine which pokemon should attack first
         var p1 = GetCurrentPlayer().currentPokemon;
         var p2 = GetPlayer(playerTurn == 1 ? 2 : 1).currentPokemon;
@@ -165,7 +169,8 @@ public class Model : Element{
         {
             if(p1.selectedSkill.type != Skill.SkillType.Poison)
             {
-                p2.TakeDamage(CalculateDamage(p1, p2));
+                d12 = CalculateDamage(p1, p2);
+                p2.TakeDamage(d12);
                 p1.selectedSkill.pp--;
             }else
             {
@@ -181,7 +186,8 @@ public class Model : Element{
         {
             if (p2.selectedSkill.type != Skill.SkillType.Poison)
             {
-                p1.TakeDamage(CalculateDamage(p2, p1));
+                d21 = CalculateDamage(p2, p1);
+                p1.TakeDamage(d21);
                 p2.selectedSkill.pp--;
             }
             else
@@ -200,6 +206,15 @@ public class Model : Element{
         {
             p2.TakeDamage(p1.health / 16);
         }
+
+        var battleStageHandler = FindObjectOfType<BattleStageHandler>();
+        if (battleStageHandler == null)
+            Debug.LogWarning("Can't find battle stage handler");
+
+        int m1 = Mathf.RoundToInt(CalculateModifier(p1, p2) - 0.1f);
+        int m2 = Mathf.RoundToInt(CalculateModifier(p2, p1) - 0.1f);
+
+        battleStageHandler.SetEffectiveness(m1, m2);
 
         Debug.Log("--------result status--------");
         p1.PrintHealth();
@@ -238,7 +253,7 @@ public class Model : Element{
     private float CalculateDamage(Pokemon attacker, Pokemon victom)
     {
         float damage = 0;
-        float modifier = CalculateModifier(attacker.type, victom.type);
+        float modifier = CalculateModifier(attacker, victom);
         float level = 50f;  // assume all pokemon are 50 levels
 
         damage = ((((level * 2) / 5) + 2) * attacker.selectedSkill.damage * attacker.attack / victom.defense) / 50 + 2;
@@ -252,10 +267,11 @@ public class Model : Element{
     /// <param name="at"></param>
     /// <param name="vt"></param>
     /// <returns></returns>
-    private float CalculateModifier(Pokemon.PokemonType at, Pokemon.PokemonType vt)
+    private float CalculateModifier(Pokemon at, Pokemon vt)
     {
-        int attackerID = (int)at;
-        int victomID = (int)vt;
+        int attackerID = (int)(at.selectedSkill.isNaturalAttack? 0 : at.type);
+        int victomID = (int)(vt.selectedSkill.isNaturalAttack ? 0 : at.type);
+
         return typeMatchupModifierTable[attackerID, victomID];
     }
 }

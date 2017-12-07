@@ -70,6 +70,7 @@ public class Pokemon : Element {
     public void TakeDamage(float d)
     {
         health -= d;
+        health = Mathf.Clamp(health, 0, maxHealth);
         if(health <= 0)
         {
             Debug.Log("This monster feinted");
@@ -144,5 +145,15 @@ public class Pokemon : Element {
             isPlayingAnim = false;
             yield return null;
         }
+    }
+
+    public virtual IEnumerator FeintAnimPlay()
+    {
+        yield return null;
+    }
+
+    public virtual IEnumerator SpawnAnimPlay()
+    {
+        yield return null;
     }
 }

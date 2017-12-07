@@ -10,6 +10,7 @@ public class Player {
     public Pokemon[] pokemons;
     public Pokemon currentPokemon;
     public bool isReady = false;
+    public int ID;
     
     /// <summary>
     /// Empty constructor for now.

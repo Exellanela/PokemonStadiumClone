@@ -4,6 +4,10 @@ using UnityEngine;
 
 public abstract class Handler : Element {
 
+    public static bool isPlayer1ChangedPokemon = false;
+    public static bool isPlayer2ChangedPokemon = false;
+    public static bool isTheFirstRound = true;
+
     protected bool canRecieveInput = false;
 
     /// <summary>
