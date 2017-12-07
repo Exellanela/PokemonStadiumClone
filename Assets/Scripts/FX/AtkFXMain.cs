@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AtkFXMain : MonoBehaviour {
 
+	/*
 	//general effects for dmg animations and/or normal-type attacks
 	public static ParticleSystem hitPart;
 	public static ParticleSystem slamPart;
@@ -36,19 +37,6 @@ public class AtkFXMain : MonoBehaviour {
 	public static ParticleSystem toxicHit;
 	public static ParticleSystem waterHit;
 
-	/*
-	public static GameObject acidHit;
-	public static GameObject emberHit;
-	public static GameObject exploHit;
-	public static GameObject iceHit;
-	public static GameObject megaDrainHit;
-	public static GameObject rockHit;
-	public static GameObject swiftHit;
-	public static GameObject thunderHit;
-	public static GameObject toxicHit;
-	public static GameObject waterHit;
-	*/
-
 	//vars that this code reads to define the above vars
 	public ParticleSystem slam;
 	public ParticleSystem hit;
@@ -78,10 +66,12 @@ public class AtkFXMain : MonoBehaviour {
 	public ParticleSystem thunderH;
 	public ParticleSystem toxicH;
 	public ParticleSystem wtrH;
+	*/
 
 	public static AtkFXMain me;
 
 	void Start() {
+		/*
 		slamPart = slam;
 		hitPart = hit;
 		dustPart = dust;
@@ -110,11 +100,15 @@ public class AtkFXMain : MonoBehaviour {
 		thunderHit = thunderH;
 		toxicHit = toxicH;
 		waterHit = wtrH;
+		*/
+
+
 	}
 
 	void Awake() {
 		me = this;
 	}
+		
 
 	public void PlayParticles(ParticleSystem PSname, Vector3 location, Quaternion rotation) {
 		ParticleSystem PSClone;
@@ -122,13 +116,4 @@ public class AtkFXMain : MonoBehaviour {
 		PSClone.Play ();
 		//Destroy (PSClone);
 	}
-
-	/*
-	public void PlayParticles(ParticleSystem PSname, Vector3 location, Quaternion rotation, float destroyTimer) {
-		ParticleSystem PSClone;
-		PSClone = Instantiate (PSname, location, rotation);
-		PSClone.Play ();
-		Destroy (PSClone, destroyTimer); //doesn't work
-	}
-	*/
 }

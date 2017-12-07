@@ -5,6 +5,7 @@ using UnityEngine;
 //TESTING PARTICLE SYSTEMS
 public class testParticles : MonoBehaviour {
 
+	/*
 	public static ParticleSystem slamPart;
 	public static ParticleSystem hitPart;
 	public static ParticleSystem rockPart;

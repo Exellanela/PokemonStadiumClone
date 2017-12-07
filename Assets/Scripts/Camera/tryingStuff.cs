@@ -48,9 +48,35 @@ public class tryingStuff : MonoBehaviour {
 	*/
 
 
+	public ParticleSystem slam;
+	public ParticleSystem iceBeam;
+	public ParticleSystem explo;
+
+	public AudioClip goodHit;
+	public AudioClip champion;
+	public AudioClip changing;
+
+
 	void Update() {
+		if (Input.GetKeyDown(KeyCode.Q)) {
+			AtkFXMain.me.PlayParticles (slam, transform.position, Quaternion.identity);
+		}
+		if (Input.GetKeyDown(KeyCode.W)) {
+			AtkFXMain.me.PlayParticles (iceBeam, transform.position, Quaternion.identity);
+		}
+		if (Input.GetKeyDown(KeyCode.E)) {
+			AtkFXMain.me.PlayParticles (explo, transform.position, Quaternion.identity);
+		}
+			
+
 		if (Input.GetKeyDown(KeyCode.A)) {
-			AtkFXMain.me.PlayParticles()
+			SoundFX.me.PlaySound (goodHit, 1f);
+		}
+		if (Input.GetKeyDown(KeyCode.S)) {
+			SoundFX.me.PlaySound (champion, 1f);
+		}
+		if (Input.GetKeyDown(KeyCode.D)) {
+			SoundFX.me.PlaySound (changing, 1f);
 		}
 	}
 }

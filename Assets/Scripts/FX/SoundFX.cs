@@ -27,7 +27,6 @@ public class SoundFX : MonoBehaviour {
 	public static AudioClip OhSnorlax;
 	public static AudioClip OhVileplume;
 	public static AudioClip UpInTheAir;
-	*/
 
 	//defining specific audioclips in the editor
 	public AudioClip championAS;
@@ -43,7 +42,7 @@ public class SoundFX : MonoBehaviour {
 	public AudioClip OhSnorlaxAS;
 	public AudioClip OhVileplumeAS;
 	public AudioClip UpInTheAirAS;
-
+*/
 
 	void Awake() {
 		me = this;
@@ -81,12 +80,12 @@ public class SoundFX : MonoBehaviour {
 	public void PlaySound(AudioClip clipName, float vol) {
 		int sNum = GetSourceNum ();
 		audSources [sNum].clip = clipName;
-		audSources [sNum].volume = vol;
+		audSources [sNum].volume = vol; //from 0.0 - 1.0
 		audSources [sNum].Play ();
 	}
 
 
-	//only one sound can play at a time
+	//getting the audioclip from the list
 	public int GetSourceNum() {
 		for (int i = 0; i < audSources.Length; i++) {
 			if (!audSources [i].isPlaying) {

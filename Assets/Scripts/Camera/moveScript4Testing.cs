@@ -28,10 +28,4 @@ public class moveScript4Testing : MonoBehaviour {
 		}
 	}
 	*/
-
-	void Update() {
-		if (Input.GetKeyDown(KeyCode.A)) {
-			AtkFXMain.me.PlayParticles()
-		}
-	}
 }
