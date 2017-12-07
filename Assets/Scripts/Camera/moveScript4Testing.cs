@@ -36,12 +36,22 @@ public class moveScript4Testing : MonoBehaviour {
 		pos = gameObject.transform.position;
 	}
 
+	/*
 	void Update() {
-		Debug.Log (pos.y);
-		if (Input.GetKeyDown(KeyCode.A)) {
-			if (pos.y < 36.3f) {
-				//transform.Translate (Vector3.down * 8);
+		//Debug.Log (pos.y);
+		if (top) {
+			if (Input.GetKeyDown (KeyCode.A)) {
+				if (pos.y > 36.3f) {
+					transform.Translate (Vector3.down * 10);
+				}
+			}
+		} else {
+			if (Input.GetKeyDown (KeyCode.S)) {
+				if (pos.y < 31.5f) {
+					transform.Translate (Vector3.up * 10);
+				}
 			}
 		}
 	}
+	*/
 }
