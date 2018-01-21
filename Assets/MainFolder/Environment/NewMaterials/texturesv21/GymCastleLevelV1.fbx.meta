@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: 012cb8f1330103e419578249faf4be23
+timeCreated: 1513265973
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: GymLeaderCastleMap:pCube1
+    100004: GymLeaderCastleMap:pCube10
+    100006: GymLeaderCastleMap:pCube11
+    100008: GymLeaderCastleMap:pCube12
+    100010: GymLeaderCastleMap:pCube13
+    100012: GymLeaderCastleMap:pCube14
+    100014: GymLeaderCastleMap:pCube15
+    100016: GymLeaderCastleMap:pCube16
+    100018: GymLeaderCastleMap:pCube17
+    100020: GymLeaderCastleMap:pCube18
+    100022: GymLeaderCastleMap:pCube19
+    100024: GymLeaderCastleMap:pCube2
+    100026: GymLeaderCastleMap:pCube3
+    100028: GymLeaderCastleMap:pCube4
+    100030: GymLeaderCastleMap:pCube5
+    100032: GymLeaderCastleMap:pCube6
+    100034: GymLeaderCastleMap:pCube7
+    100036: GymLeaderCastleMap:pCube8
+    100038: GymLeaderCastleMap:pCube9
+    100040: GymLeaderCastleMap:pCylinder1
+    100042: GymLeaderCastleMap:pDisc1
+    100044: GymLeaderCastleMap:pDisc2
+    100046: GymLeaderCastleMap:pDisc3
+    100048: GymLeaderCastleMap:pDisc4
+    100050: GymLeaderCastleMap:pDisc5
+    100052: GymLeaderCastleMap:pDisc6
+    100054: GymLeaderCastleMap:pDisc7
+    100056: GymLeaderCastleMap:polySurface1
+    100058: GymLeaderCastleMap:polySurface2
+    100060: GymLeaderCastleMap:polySurface2 1
+    100062: GymLeaderCastleMap:polySurface3
+    100064: GymLeaderCastleMap:polySurface4
+    100066: GymLeaderCastleMap:polySurface4 1
+    100068: GymLeaderCastleMap:polySurface5
+    100070: GymLeaderCastleMap:polySurface5 1
+    100072: GymLeaderCastleMap:polySurface6
+    100074: GymLeaderCastleMap:polySurface7
+    100076: GymLeaderCastleMap:polySurface8
+    100078: GymLeaderCastleMap:polySurface8 1
+    100080: GymLeaderCastleMap:transform1
+    100082: GymLeaderCastleMap:transform10
+    100084: GymLeaderCastleMap:transform11
+    100086: GymLeaderCastleMap:transform12
+    100088: GymLeaderCastleMap:transform13
+    100090: GymLeaderCastleMap:transform14
+    100092: GymLeaderCastleMap:transform15
+    100094: GymLeaderCastleMap:transform16
+    100096: GymLeaderCastleMap:transform17
+    100098: GymLeaderCastleMap:transform18
+    100100: GymLeaderCastleMap:transform19
+    100102: GymLeaderCastleMap:transform2
+    100104: GymLeaderCastleMap:transform20
+    100106: GymLeaderCastleMap:transform21
+    100108: GymLeaderCastleMap:transform22
+    100110: GymLeaderCastleMap:transform23
+    100112: GymLeaderCastleMap:transform24
+    100114: GymLeaderCastleMap:transform25
+    100116: GymLeaderCastleMap:transform26
+    100118: GymLeaderCastleMap:transform27
+    100120: GymLeaderCastleMap:transform28
+    100122: GymLeaderCastleMap:transform29
+    100124: GymLeaderCastleMap:transform3
+    100126: GymLeaderCastleMap:transform30
+    100128: GymLeaderCastleMap:transform31
+    100130: GymLeaderCastleMap:transform32
+    100132: GymLeaderCastleMap:transform33
+    100134: GymLeaderCastleMap:transform34
+    100136: GymLeaderCastleMap:transform35
+    100138: GymLeaderCastleMap:transform4
+    100140: GymLeaderCastleMap:transform5
+    100142: GymLeaderCastleMap:transform6
+    100144: GymLeaderCastleMap:transform7
+    100146: GymLeaderCastleMap:transform8
+    100148: GymLeaderCastleMap:transform9
+    100150: pCube1
+    100152: pCube10
+    100154: pCube11
+    100156: pCube12
+    100158: pCube2
+    100160: pCube3
+    100162: pCube4
+    100164: pCube5
+    100166: pCube6
+    100168: pCube7
+    100170: pCube8
+    100172: pCube9
+    100174: pCylinder1
+    100176: pCylinder3
+    100178: pCylinder4
+    100180: pCylinder5
+    100182: pCylinder6
+    100184: Pillar:pCube1
+    100186: polySurface1
+    100188: polySurface11
+    100190: polySurface18
+    100192: polySurface19
+    100194: polySurface20
+    100196: polySurface21
+    100198: transform1
+    100200: transform2
+    100202: transform3
+    100204: transform4
+    100206: transform5
+    100208: transform6
+    100210: transform7
+    400000: //RootNode
+    400002: GymLeaderCastleMap:pCube1
+    400004: GymLeaderCastleMap:pCube10
+    400006: GymLeaderCastleMap:pCube11
+    400008: GymLeaderCastleMap:pCube12
+    400010: GymLeaderCastleMap:pCube13
+    400012: GymLeaderCastleMap:pCube14
+    400014: GymLeaderCastleMap:pCube15
+    400016: GymLeaderCastleMap:pCube16
+    400018: GymLeaderCastleMap:pCube17
+    400020: GymLeaderCastleMap:pCube18
+    400022: GymLeaderCastleMap:pCube19
+    400024: GymLeaderCastleMap:pCube2
+    400026: GymLeaderCastleMap:pCube3
+    400028: GymLeaderCastleMap:pCube4
+    400030: GymLeaderCastleMap:pCube5
+    400032: GymLeaderCastleMap:pCube6
+    400034: GymLeaderCastleMap:pCube7
+    400036: GymLeaderCastleMap:pCube8
+    400038: GymLeaderCastleMap:pCube9
+    400040: GymLeaderCastleMap:pCylinder1
+    400042: GymLeaderCastleMap:pDisc1
+    400044: GymLeaderCastleMap:pDisc2
+    400046: GymLeaderCastleMap:pDisc3
+    400048: GymLeaderCastleMap:pDisc4
+    400050: GymLeaderCastleMap:pDisc5
+    400052: GymLeaderCastleMap:pDisc6
+    400054: GymLeaderCastleMap:pDisc7
+    400056: GymLeaderCastleMap:polySurface1
+    400058: GymLeaderCastleMap:polySurface2
+    400060: GymLeaderCastleMap:polySurface2 1
+    400062: GymLeaderCastleMap:polySurface3
+    400064: GymLeaderCastleMap:polySurface4
+    400066: GymLeaderCastleMap:polySurface4 1
+    400068: GymLeaderCastleMap:polySurface5
+    400070: GymLeaderCastleMap:polySurface5 1
+    400072: GymLeaderCastleMap:polySurface6
+    400074: GymLeaderCastleMap:polySurface7
+    400076: GymLeaderCastleMap:polySurface8
+    400078: GymLeaderCastleMap:polySurface8 1
+    400080: GymLeaderCastleMap:transform1
+    400082: GymLeaderCastleMap:transform10
+    400084: GymLeaderCastleMap:transform11
+    400086: GymLeaderCastleMap:transform12
+    400088: GymLeaderCastleMap:transform13
+    400090: GymLeaderCastleMap:transform14
+    400092: GymLeaderCastleMap:transform15
+    400094: GymLeaderCastleMap:transform16
+    400096: GymLeaderCastleMap:transform17
+    400098: GymLeaderCastleMap:transform18
+    400100: GymLeaderCastleMap:transform19
+    400102: GymLeaderCastleMap:transform2
+    400104: GymLeaderCastleMap:transform20
+    400106: GymLeaderCastleMap:transform21
+    400108: GymLeaderCastleMap:transform22
+    400110: GymLeaderCastleMap:transform23
+    400112: GymLeaderCastleMap:transform24
+    400114: GymLeaderCastleMap:transform25
+    400116: GymLeaderCastleMap:transform26
+    400118: GymLeaderCastleMap:transform27
+    400120: GymLeaderCastleMap:transform28
+    400122: GymLeaderCastleMap:transform29
+    400124: GymLeaderCastleMap:transform3
+    400126: GymLeaderCastleMap:transform30
+    400128: GymLeaderCastleMap:transform31
+    400130: GymLeaderCastleMap:transform32
+    400132: GymLeaderCastleMap:transform33
+    400134: GymLeaderCastleMap:transform34
+    400136: GymLeaderCastleMap:transform35
+    400138: GymLeaderCastleMap:transform4
+    400140: GymLeaderCastleMap:transform5
+    400142: GymLeaderCastleMap:transform6
+    400144: GymLeaderCastleMap:transform7
+    400146: GymLeaderCastleMap:transform8
+    400148: GymLeaderCastleMap:transform9
+    400150: pCube1
+    400152: pCube10
+    400154: pCube11
+    400156: pCube12
+    400158: pCube2
+    400160: pCube3
+    400162: pCube4
+    400164: pCube5
+    400166: pCube6
+    400168: pCube7
+    400170: pCube8
+    400172: pCube9
+    400174: pCylinder1
+    400176: pCylinder3
+    400178: pCylinder4
+    400180: pCylinder5
+    400182: pCylinder6
+    400184: Pillar:pCube1
+    400186: polySurface1
+    400188: polySurface11
+    400190: polySurface18
+    400192: polySurface19
+    400194: polySurface20
+    400196: polySurface21
+    400198: transform1
+    400200: transform2
+    400202: transform3
+    400204: transform4
+    400206: transform5
+    400208: transform6
+    400210: transform7
+    2300000: GymLeaderCastleMap:pDisc2
+    2300002: GymLeaderCastleMap:pDisc3
+    2300004: GymLeaderCastleMap:pDisc4
+    2300006: pCube10
+    2300008: pCube11
+    2300010: pCube12
+    2300012: pCube4
+    2300014: pCube5
+    2300016: pCube6
+    2300018: pCube7
+    2300020: pCube8
+    2300022: pCube9
+    2300024: pCylinder4
+    2300026: pCylinder5
+    2300028: pCylinder6
+    2300030: Pillar:pCube1
+    2300032: polySurface1
+    2300034: polySurface18
+    2300036: polySurface19
+    2300038: polySurface20
+    2300040: polySurface21
+    3300000: GymLeaderCastleMap:pDisc2
+    3300002: GymLeaderCastleMap:pDisc3
+    3300004: GymLeaderCastleMap:pDisc4
+    3300006: pCube10
+    3300008: pCube11
+    3300010: pCube12
+    3300012: pCube4
+    3300014: pCube5
+    3300016: pCube6
+    3300018: pCube7
+    3300020: pCube8
+    3300022: pCube9
+    3300024: pCylinder4
+    3300026: pCylinder5
+    3300028: pCylinder6
+    3300030: Pillar:pCube1
+    3300032: polySurface1
+    3300034: polySurface18
+    3300036: polySurface19
+    3300038: polySurface20
+    3300040: polySurface21
+    4300000: pCube4
+    4300002: Pillar:pCube1
+    4300004: GymLeaderCastleMap:pDisc2
+    4300006: GymLeaderCastleMap:pDisc3
+    4300008: GymLeaderCastleMap:pDisc4
+    4300010: polySurface1
+    4300012: polySurface18
+    4300014: polySurface19
+    4300016: pCube5
+    4300018: pCube6
+    4300020: pCube7
+    4300022: pCube8
+    4300024: pCube9
+    4300026: pCube10
+    4300028: pCube11
+    4300030: polySurface20
+    4300032: polySurface21
+    4300034: pCylinder4
+    4300036: pCube12
+    4300038: pCylinder5
+    4300040: pCylinder6
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackSurface
+    second: {fileID: 2100000, guid: d78bad175dc59604eaab4ddaa56ca04c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CastleDarkest
+    second: {fileID: 2100000, guid: d93c3ac2004b4b74cbad5fd819b1faff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CastleHalfLightDark
+    second: {fileID: 2100000, guid: e7e332a892e0830429e9ddd1790c8ecc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CastleLightest
+    second: {fileID: 2100000, guid: a531f22404fa0ab4992d3ccb3dda33bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GatePillarFront
+    second: {fileID: 2100000, guid: bcb865595d980e6459e8f3ff6720ec93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GatePillarSide
+    second: {fileID: 2100000, guid: ba6f198c1b8749a45a3bba5fdb65a6da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GatePillarTop
+    second: {fileID: 2100000, guid: 084b468f6ade44041ac350a462a87108, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GateTexture
+    second: {fileID: 2100000, guid: 0fd7a491a0e1c714db9530054b67f3e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillar1
+    second: {fileID: 2100000, guid: 7bee77f85166f594290901d6d71df3e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PillarBaseTexture
+    second: {fileID: 2100000, guid: 97c5703bf44b6024bb27cb45020e9f87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PillarWrapTexture
+    second: {fileID: 2100000, guid: 089bbfee6ea387f4c82331e701da33c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PissClouds
+    second: {fileID: 2100000, guid: 898c5480252752542b19868fc6314e88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShitClouds
+    second: {fileID: 2100000, guid: ad556411d7767b84a8cac68879cc90e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: groundtexture
+    second: {fileID: 2100000, guid: 50ffd9eb8ef6dda4dad4e7783d38c710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 53ef70016ef3a744da1c5a83ca1ade1c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

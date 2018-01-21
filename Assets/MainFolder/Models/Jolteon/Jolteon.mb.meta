@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 2f76a2d326ecf4f02ab8e00adf432bfc
+timeCreated: 1512485438
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: chest
+    100002: front_shoulder
+    100004: front_shoulder1
+    100006: front_shoulder1 1
+    100008: front_shoulder2
+    100010: front_shoulder2 1
+    100012: front_shoulder3
+    100014: front_shoulder3 1
+    100016: front_shoulder4
+    100018: front_shoulder4 1
+    100020: front_shoulder5
+    100022: front_shoulder5 1
+    100024: front_shoulder6
+    100026: front_shoulder6 1
+    100028: front_shoulder7
+    100030: Head
+    100032: Husky:pCube13
+    100034: Husky:pPipe1
+    100036: Husky:pPipe1 1
+    100038: Husky:pPipe2
+    100040: Husky:pPipe3
+    100042: Husky:transform1
+    100044: Husky:transform2
+    100046: Husky:transform3
+    100048: Husky:transform4
+    100050: ikHandle1
+    100052: ikHandle2
+    100054: ikHandle3
+    100056: ikHandle4
+    100058: ikHandle5
+    100060: ikHandle6
+    100062: ikHandle7
+    100064: ikHandle8
+    100066: jaw
+    100068: joint1
+    100070: joint2
+    100072: Jolteon
+    100074: //RootNode
+    100076: left_elbow1
+    100078: left_foot1
+    100080: left_hind1
+    100082: left_knee1
+    100084: left_paw1
+    100086: left_shoulder1
+    100088: neck
+    100090: pelvis
+    100092: pelvis1
+    100094: pelvis2
+    100096: pelvis2 1
+    100098: pelvis3
+    100100: pelvis3 1
+    100102: pelvis4
+    100104: pelvis4 1
+    100106: pelvis5
+    100108: pelvis5 1
+    100110: pelvis6
+    100112: pelvis6 1
+    100114: pelvis7
+    100116: polySurface4
+    100118: polySurface5
+    100120: polySurface6
+    100122: polySurface7
+    100124: polySurface8
+    100126: right_elbow
+    100128: right_foot
+    100130: right_hind
+    100132: right_knee
+    100134: right_paw
+    100136: right_shoulder
+    100138: root
+    100140: root1
+    100142: spine
+    100144: spine1
+    100146: spine2
+    100148: spine3
+    100150: spine4
+    100152: spine5
+    100154: spine6
+    100156: spine7
+    100158: spine_end
+    100160: spine_mid
+    100162: tail_spikes
+    100164: transform1
+    400000: chest
+    400002: front_shoulder
+    400004: front_shoulder1
+    400006: front_shoulder1 1
+    400008: front_shoulder2
+    400010: front_shoulder2 1
+    400012: front_shoulder3
+    400014: front_shoulder3 1
+    400016: front_shoulder4
+    400018: front_shoulder4 1
+    400020: front_shoulder5
+    400022: front_shoulder5 1
+    400024: front_shoulder6
+    400026: front_shoulder6 1
+    400028: front_shoulder7
+    400030: Head
+    400032: Husky:pCube13
+    400034: Husky:pPipe1
+    400036: Husky:pPipe1 1
+    400038: Husky:pPipe2
+    400040: Husky:pPipe3
+    400042: Husky:transform1
+    400044: Husky:transform2
+    400046: Husky:transform3
+    400048: Husky:transform4
+    400050: ikHandle1
+    400052: ikHandle2
+    400054: ikHandle3
+    400056: ikHandle4
+    400058: ikHandle5
+    400060: ikHandle6
+    400062: ikHandle7
+    400064: ikHandle8
+    400066: jaw
+    400068: joint1
+    400070: joint2
+    400072: //RootNode
+    400074: Jolteon
+    400076: left_elbow1
+    400078: left_foot1
+    400080: left_hind1
+    400082: left_knee1
+    400084: left_paw1
+    400086: left_shoulder1
+    400088: neck
+    400090: pelvis
+    400092: pelvis1
+    400094: pelvis2
+    400096: pelvis2 1
+    400098: pelvis3
+    400100: pelvis3 1
+    400102: pelvis4
+    400104: pelvis4 1
+    400106: pelvis5
+    400108: pelvis5 1
+    400110: pelvis6
+    400112: pelvis6 1
+    400114: pelvis7
+    400116: polySurface4
+    400118: polySurface5
+    400120: polySurface6
+    400122: polySurface7
+    400124: polySurface8
+    400126: right_elbow
+    400128: right_foot
+    400130: right_hind
+    400132: right_knee
+    400134: right_paw
+    400136: right_shoulder
+    400138: root
+    400140: root1
+    400142: spine
+    400144: spine1
+    400146: spine2
+    400148: spine3
+    400150: spine4
+    400152: spine5
+    400154: spine6
+    400156: spine7
+    400158: spine_end
+    400160: spine_mid
+    400162: tail_spikes
+    400164: transform1
+    4300000: polySurface5
+    4300002: polySurface6
+    4300004: polySurface7
+    4300006: polySurface8
+    7400000: Jolteon Faint
+    7400002: Jolteon Attack Final
+    7400004: Jolteon Idle Final
+    7400006: Jolteon Damage Final
+    9500000: //RootNode
+    13700000: polySurface5
+    13700002: polySurface6
+    13700004: polySurface7
+    13700006: polySurface8
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 56dd08bd4498d4e50ad8d0dbe62d5756, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phongE1
+    second: {fileID: 2100000, guid: 5931a4cf8759c45168fa8c489c600f29, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 1
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Jolteon Faint
+      takeName: Take 001
+      firstFrame: 182
+      lastFrame: 242
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jolteon Attack Final
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 121
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jolteon Idle Final
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jolteon Damage Final
+      takeName: Take 001
+      firstFrame: 122
+      lastFrame: 182
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

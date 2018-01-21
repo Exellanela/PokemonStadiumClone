@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: 5c959f2385f194a0194b7b29b407ce95
+timeCreated: 1511727900
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ikHandle1
+    100002: ikHandle2
+    100004: polySurface2
+    100006: polySurface3
+    100008: polySurface4
+    100010: polySurface5
+    100012: polySurface6
+    100014: polySurface7
+    100016: polySurface8
+    100018: //RootNode
+    100020: root
+    100022: Shoulder
+    100024: Shoulder1
+    100026: Shoulder1 1
+    100028: Shoulder2
+    100030: Shoulder2 1
+    100032: Shoulder3
+    100034: Shoulder3 1
+    100036: Shoulder4
+    100038: Shoulder4 1
+    100040: Shoulder5
+    100042: Shoulder5 1
+    100044: Shoulder6
+    100046: Spine_base
+    100048: Spine_base1
+    100050: Spine_base10
+    100052: Spine_base10 1
+    100054: Spine_base11
+    100056: Spine_base11 1
+    100058: Spine_base12
+    100060: Spine_base12 1
+    100062: Spine_base13
+    100064: Spine_base13 1
+    100066: Spine_base14
+    100068: Spine_base2
+    100070: Spine_base3
+    100072: Spine_base4
+    100074: Spine_base5
+    100076: Spine_base6
+    100078: Spine_base7
+    100080: Spine_base8
+    100082: Spine_base9
+    100084: Tail_Base
+    100086: Tail_end
+    100088: transform1
+    400000: ikHandle1
+    400002: ikHandle2
+    400004: polySurface2
+    400006: polySurface3
+    400008: polySurface4
+    400010: polySurface5
+    400012: polySurface6
+    400014: polySurface7
+    400016: polySurface8
+    400018: //RootNode
+    400020: root
+    400022: Shoulder
+    400024: Shoulder1
+    400026: Shoulder1 1
+    400028: Shoulder2
+    400030: Shoulder2 1
+    400032: Shoulder3
+    400034: Shoulder3 1
+    400036: Shoulder4
+    400038: Shoulder4 1
+    400040: Shoulder5
+    400042: Shoulder5 1
+    400044: Shoulder6
+    400046: Spine_base
+    400048: Spine_base1
+    400050: Spine_base10
+    400052: Spine_base10 1
+    400054: Spine_base11
+    400056: Spine_base11 1
+    400058: Spine_base12
+    400060: Spine_base12 1
+    400062: Spine_base13
+    400064: Spine_base13 1
+    400066: Spine_base14
+    400068: Spine_base2
+    400070: Spine_base3
+    400072: Spine_base4
+    400074: Spine_base5
+    400076: Spine_base6
+    400078: Spine_base7
+    400080: Spine_base8
+    400082: Spine_base9
+    400084: Tail_Base
+    400086: Tail_end
+    400088: transform1
+    4300000: polySurface3
+    4300002: polySurface4
+    4300004: polySurface5
+    4300006: polySurface6
+    4300008: polySurface7
+    4300010: polySurface8
+    7400000: Rapidash Idling
+    7400002: Rapidash Attacking
+    7400004: Rapidash Damage
+    7400006: Rapidash Faint
+    9500000: //RootNode
+    13700000: polySurface3
+    13700002: polySurface4
+    13700004: polySurface5
+    13700006: polySurface6
+    13700008: polySurface7
+    13700010: polySurface8
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 09e3e73a4d62e46698508fcd8f848d17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: b69b690041ede4071bdb08804d5010f5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Rapidash Idling
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Rapidash Attacking
+      takeName: Take 001
+      firstFrame: 61
+      lastFrame: 121
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Rapidash Damage
+      takeName: Take 001
+      firstFrame: 122
+      lastFrame: 182
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Rapidash Faint
+      takeName: Take 001
+      firstFrame: 182
+      lastFrame: 242
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
